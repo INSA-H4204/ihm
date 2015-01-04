@@ -1,0 +1,26 @@
+
+#body {
+	background-color : #F2F2F2;
+}
+
+.login-form {
+	margin-top : 40px;
+	background-color : #C25959;
+	border-radius : solid;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+.logout, .logout a {
+  color: #fff;
+  margin-top : 15px;
+  margin-left : 10px;
+}
+
+.logout:hover {
+   color:#DEDEDE;
+   cursor: pointer;	
+}
+
+.affecter {
+	margin-top : 160px;
+}
