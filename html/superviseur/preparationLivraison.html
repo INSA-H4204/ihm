@@ -1,199 +1,148 @@
-<!DOCTYPE html>
-<html ng-app="myApp">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Optimod'Lyon</title>
 
-            <!-- Personal CSS stylesheets-->
-        <!--<a href="../../bootstrap.php.cache"></a>-->
-
-        
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css">
-        <link href="../style.css" rel="stylesheet">
-
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css" type="text/css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    </head>
-    <body id="body"> 
-        <nav class="navbar navbar-inverse navbar-default" role="navigation">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="#">H4204 - Optimod</a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a href="preparationLivraison.html">Préparation <span class="sr-only">(current)</span></a></li>
-                    <li><a href="editionLivraison.html">Edition</a></li>
-                    <li><a href="suiviLivraison.html">Suivi</a></li>
-                  </ul>
-                  <span class="navbar-right logout glyphicon glyphicon-log-out" aria-hidden="true"></span>
-                  <p class="navbar-text navbar-right">Enregistré en tant que <a href="#" class="navbar-link">Jacques Chirac</a>
-                  </p>
-                </div>
-            </div>
-        </nav>
-        <div class="container">
-        	<div  class="site-wrapper">
-                <div class="row">
-                    <div class="col-md-3">
-                        <select class="form-control">
-                          <option>--Selectionnez une zone--</option>
-                          <option>Croix Luizet</option>
-                          <option>Doua (Campus)</option>
-                          <option>Avenue Salengro</option>
-                          <option>Tonkin</option>
-                          <option>Charpennes</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-7">
-                <h4>Livraison de la zone {{zone}}</h4>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>N°Livraison</th>
-                                <th>Nom client</th>
-                                <th>Plage Horraire</th>
-                                <th>Adresse</th>
-                                <th>Affecter</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>L1</td>
-                                <td>ANTOINE Kevin</td>
-                                <td>10h-12h</td>
-                                <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                            <tr>
-                                <td>L2</td>
-                                <td>KHYATI Yousra</td>
-                                <td>10h-12h</td>
-                                <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                            <tr>
-                                <td>L3</td>
-                                <td>GERARD Huber</td>
-                                <td>12h-14h</td>
-                                <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                            <tr>
-                                <td>L4</td>
-                                <td>OLINEN-JOHANSON Fredrik</td>
-                                <td>12h-14h</td>
-                                <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                            <tr>
-                                <td>L5</td>
-                                <td>BOUNOUS Gabriel</td>
-                                <td>14h-16h</td>
-                                <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                            <tr>
-                                <td>L6</td>
-                                <td>WANG Yukai</td>
-                                <td>16h-18h</td>
-                                <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                            <tr>
-                                <td>L7</td>
-                                <td>HELMER Thomas</td>
-                                <td>16h-18h</td>
-                                <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-md-1">
-                <button class="affecter btn btn-primary">Affecter</button>
-                </div>
-                <div class="col-md-4">
-                    <h4>Livreur de la zone {{zone}}</h4><br/>
-                    <table class="table table-striped">
-
-                        <thead>
-                            <tr>
-                                <th>Nom</th>
-                                <th>Prénom</th>
-                                <th>Livraisons Prévus</th>
-                                <th>Prénom</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Hollande</td>
-                                <td>Francois</td>
-                                <td>6</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                            <tr>
-                                <td>Sarkozy</td>
-                                <td>Nicolas</td>
-                                <td>7</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                            <tr>
-                                <td>Chirac</td>
-                                <td>Jacques</td>
-                                <td>10</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                            <tr>
-                                <td>Mitterand</td>
-                                <td>Francois</td>
-                                <td>4</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                            <tr>
-                                <td>Giscard D'Estaing</td>
-                                <td>Valéry</td>
-                                <td>6</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                            <tr>
-                                <td>Pompidou</td>
-                                <td>Goerges</td>
-                                <td>7</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                            <tr>
-                                <td>De Gaulle</td>
-                                <td>Charles</td>
-                                <td>2</td>
-                                <td><input type="checkbox"/></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <hr>
-            <div class="col-md-12">
-                <button class="col-md-offset-1 pull-right btn btn-xs btn-primary">Calculer Feuille de Route</button>
-                <button class="pull-right btn btn-xs btn-primary">Auto affecter</button>
-            </div>
-            
-            <div class="col-md-12 mastfoot">
-                 <hr>
-                 <p>©2014 H4204 - IF INSA de Lyon</p>
+<div class="container">
+	<div  class="site-wrapper">
+        <div class="row">
+            <div class="col-md-3">
+                <select class="form-control">
+                  <option>--Selectionnez une zone--</option>
+                  <option>Croix Luizet</option>
+                  <option>Doua (Campus)</option>
+                  <option>Avenue Salengro</option>
+                  <option>Tonkin</option>
+                  <option>Charpennes</option>
+                </select>
             </div>
         </div>
-            <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-            <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-    </body>
-</html>
+        <div class="col-md-7">
+        <h4>Livraison de la zone {{zone}}</h4>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>N°Livraison</th>
+                        <th>Nom client</th>
+                        <th>Plage Horraire</th>
+                        <th>Adresse</th>
+                        <th>Affecter</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>L1</td>
+                        <td>ANTOINE Kevin</td>
+                        <td>10h-12h</td>
+                        <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>L2</td>
+                        <td>KHYATI Yousra</td>
+                        <td>10h-12h</td>
+                        <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>L3</td>
+                        <td>GERARD Huber</td>
+                        <td>12h-14h</td>
+                        <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>L4</td>
+                        <td>OLINEN-JOHANSON Fredrik</td>
+                        <td>12h-14h</td>
+                        <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>L5</td>
+                        <td>BOUNOUS Gabriel</td>
+                        <td>14h-16h</td>
+                        <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>L6</td>
+                        <td>WANG Yukai</td>
+                        <td>16h-18h</td>
+                        <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>L7</td>
+                        <td>HELMER Thomas</td>
+                        <td>16h-18h</td>
+                        <td>20 Av Albert Einstein - 69100 - Villeurbanne</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-1">
+        <button class="affecter btn btn-primary">Affecter</button>
+        </div>
+        <div class="col-md-4">
+            <h4>Livreur de la zone {{zone}}</h4><br/>
+            <table class="table table-striped">
+
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Livraisons Prévus</th>
+                        <th>Prénom</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Hollande</td>
+                        <td>Francois</td>
+                        <td>6</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>Sarkozy</td>
+                        <td>Nicolas</td>
+                        <td>7</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>Chirac</td>
+                        <td>Jacques</td>
+                        <td>10</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>Mitterand</td>
+                        <td>Francois</td>
+                        <td>4</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>Giscard D'Estaing</td>
+                        <td>Valéry</td>
+                        <td>6</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>Pompidou</td>
+                        <td>Goerges</td>
+                        <td>7</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                    <tr>
+                        <td>De Gaulle</td>
+                        <td>Charles</td>
+                        <td>2</td>
+                        <td><input type="checkbox"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <div class="col-md-12">
+        <button class="col-md-offset-1 pull-right btn btn-xs btn-primary">Calculer Feuille de Route</button>
+        <button class="pull-right btn btn-xs btn-primary">Auto affecter</button>
+    </div>
+</div>

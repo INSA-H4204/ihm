@@ -1,169 +1,122 @@
-<!DOCTYPE html>
-<html ng-app="myApp">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Optimod'Lyon</title>
 
-            <!-- Personal CSS stylesheets-->
-        <!--<a href="../../bootstrap.php.cache"></a>-->
-
-        
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="../style.css">
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css" type="text/css">
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    </head>
-    <body id="body">
-        <nav class="navbar navbar-inverse navbar-default" role="navigation">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="#">H4204 - Optimod</a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav">
-                    <li><a href="preparationLivraison.html">Préparation <span class="sr-only">(current)</span></a></li>
-                    <li><a href="editionLivraison.html">Edition</a></li>
-                    <li class="active"><a href="suiviLivraison.html">Suivi</a></li>
+<div class="container">
+    <div class="row">
+    	<div class="site-wrapper row">
+            <div class="col-md-8">
+                <div role="tabpanel">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#croix-luizet" aria-controls="home" role="tab" data-toggle="tab">Croix Luizet</a></li>
+                    <li role="presentation"><a href="#doua" aria-controls="profile" role="tab" data-toggle="tab">Doua</a></li>
+                    <li role="presentation"><a href="#salengro" aria-controls="messages" role="tab" data-toggle="tab">Salengro</a></li>
+                    <li role="presentation"><a href="#tonkin" aria-controls="settings" role="tab" data-toggle="tab">Tonkin</a></li>
+                    <li role="presentation"><a href="#charpennes" aria-controls="settings" role="tab" data-toggle="tab">Charpennes</a></li>
                   </ul>
-                  <p class="navbar-text navbar-right">Enregistré en tant que <a href="#" class="navbar-link">Jacques Chirac</a></p>
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="croix-luizet">
+                          <br/>
+                          <iframe
+                            width="700"
+                            height="450"
+                            frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDRyM_qbfGhiViMn9aazDxSAfhzrdzADdA&q=Villeurbanne+Croix+Luizet">
+                          </iframe>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="doua">
+                          <br/>
+                          <iframe
+                            width="700"
+                            height="450"
+                            frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDRyM_qbfGhiViMn9aazDxSAfhzrdzADdA&q=Villeurbanne+Campus+Doua">
+                          </iframe>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="salengro">
+                          <br/>
+                          <iframe
+                            width="700"
+                            height="450"
+                            frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDRyM_qbfGhiViMn9aazDxSAfhzrdzADdA&q=Villeurbanne+Salengro">
+                          </iframe>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="tonkin">
+                          <br/>
+                          <iframe
+                            width="700"
+                            height="450"
+                            frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDRyM_qbfGhiViMn9aazDxSAfhzrdzADdA&q=Villeurbanne+Tonkin">
+                          </iframe>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="charpennes">
+                          <br/>
+                          <iframe
+                            width="700"
+                            height="450"
+                            frameborder="0" style="border:0"
+                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDRyM_qbfGhiViMn9aazDxSAfhzrdzADdA&q=Villeurbanne+Charpennes">
+                          </iframe>
+                    </div>
+                  </div>
                 </div>
             </div>
-        </nav>
-        <div class="container">
-            <div class="row">
-            	<div class="site-wrapper row">
-                    <div class="col-md-8">
-                        <div role="tabpanel">
-                          <!-- Nav tabs -->
-                          <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#croix-luizet" aria-controls="home" role="tab" data-toggle="tab">Croix Luizet</a></li>
-                            <li role="presentation"><a href="#doua" aria-controls="profile" role="tab" data-toggle="tab">Doua</a></li>
-                            <li role="presentation"><a href="#salengro" aria-controls="messages" role="tab" data-toggle="tab">Salengro</a></li>
-                            <li role="presentation"><a href="#tonkin" aria-controls="settings" role="tab" data-toggle="tab">Tonkin</a></li>
-                            <li role="presentation"><a href="#charpennes" aria-controls="settings" role="tab" data-toggle="tab">Charpennes</a></li>
-                          </ul>
-                          <!-- Tab panes -->
-                          <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="croix-luizet">
-                                  <br/>
-                                  <iframe
-                                    width="700"
-                                    height="450"
-                                    frameborder="0" style="border:0"
-                                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDRyM_qbfGhiViMn9aazDxSAfhzrdzADdA&q=Villeurbanne+Croix+Luizet">
-                                  </iframe>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="doua">
-                                  <br/>
-                                  <iframe
-                                    width="700"
-                                    height="450"
-                                    frameborder="0" style="border:0"
-                                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDRyM_qbfGhiViMn9aazDxSAfhzrdzADdA&q=Villeurbanne+Campus+Doua">
-                                  </iframe>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="salengro">
-                                  <br/>
-                                  <iframe
-                                    width="700"
-                                    height="450"
-                                    frameborder="0" style="border:0"
-                                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDRyM_qbfGhiViMn9aazDxSAfhzrdzADdA&q=Villeurbanne+Salengro">
-                                  </iframe>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="tonkin">
-                                  <br/>
-                                  <iframe
-                                    width="700"
-                                    height="450"
-                                    frameborder="0" style="border:0"
-                                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDRyM_qbfGhiViMn9aazDxSAfhzrdzADdA&q=Villeurbanne+Tonkin">
-                                  </iframe>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="charpennes">
-                                  <br/>
-                                  <iframe
-                                    width="700"
-                                    height="450"
-                                    frameborder="0" style="border:0"
-                                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDRyM_qbfGhiViMn9aazDxSAfhzrdzADdA&q=Villeurbanne+Charpennes">
-                                  </iframe>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="row col-md-offset-3">
-                            <button type="button" class="btn btn-primary pull-right" aria-label="Left Align">
-                              <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
-                            </button>
-                        </div>
-                        <br/>
-                        <div class="panel panel-default">
-                          <div class="panel-heading">Plage Horaire</div>
-                          <div class="panel-body">
-                            <div class="list-group">
-                              <a href="#" class="list-group-item active">
-                                8h-10h
-                              </a>
-                              <a href="#" class="list-group-item">10h-12h</a>
-                              <a href="#" class="list-group-item">12h-14h</a>
-                              <a href="#" class="list-group-item">14h-16h</a>
-                              <a href="#" class="list-group-item">16h-18h</a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h3 class="panel-title">Informations Livraison</h3>
-                          </div>
-                          <div class="panel-body">
-                            <button type="button" class="col-md-offset-1 btn btn-primary pull-right" aria-label="Left Align">
-                              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                            </button>
-                            <button type="button" class=" btn btn-primary pull-right" aria-label="Left Align">
-                              <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
-                            </button>
-                            <h3>Livraison N°123</h3>
-                            <h3>Client</h3>
-                            <div class="well well-sm col-md-offset-1 col-md-10">
-                                <p>Nom : ANTOINE</p>
-                                <p>Prénom : Kevin</p>
-                                <p>Tél : 0602184327</p>
-                                <p>Adresse : 20 Av Albert Einstein 69100 Villeurbanne (Doua)</p>
-                            </div>
-                            <br/>
-                            <p>Heure Prévu : 9h34</p>
-                            <p>Status : En cours</p>
-                            <p>Plage Horaire
-                                <select class="form-control">
-                                  <option value="">8h-10h</option>
-                                  <option active value="">10h-12h</option>
-                                  <option value="">12h-14h</option>
-                                  <option value="">14h-16h</option>
-                                  <option value="">16h-18h</option>
-                                </select>
-                            </p>
-                          </div>
-                        </div>   
-                    </div>
+            <div class="col-md-4">
+                <div class="row col-md-offset-3">
+                    <button type="button" class="btn btn-primary pull-right" aria-label="Left Align">
+                      <span class="glyphicon glyphicon-print" aria-hidden="true"></span>
+                    </button>
                 </div>
-                <div class="mastfoot"><hr>
-                     <p>©2014 H4204 - IF INSA de Lyon</p>
+                <br/>
+                <div class="panel panel-default">
+                  <div class="panel-heading">Plage Horaire</div>
+                  <div class="panel-body">
+                    <div class="list-group">
+                      <a href="#" class="list-group-item active">
+                        8h-10h
+                      </a>
+                      <a href="#" class="list-group-item">10h-12h</a>
+                      <a href="#" class="list-group-item">12h-14h</a>
+                      <a href="#" class="list-group-item">14h-16h</a>
+                      <a href="#" class="list-group-item">16h-18h</a>
+                    </div>
+                  </div>
                 </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Informations Livraison</h3>
+                  </div>
+                  <div class="panel-body">
+                    <button type="button" class="col-md-offset-1 btn btn-primary pull-right" aria-label="Left Align">
+                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class=" btn btn-primary pull-right" aria-label="Left Align">
+                      <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                    </button>
+                    <h3>Livraison N°123</h3>
+                    <h3>Client</h3>
+                    <div class="well well-sm col-md-offset-1 col-md-10">
+                        <p>Nom : ANTOINE</p>
+                        <p>Prénom : Kevin</p>
+                        <p>Tél : 0602184327</p>
+                        <p>Adresse : 20 Av Albert Einstein 69100 Villeurbanne (Doua)</p>
+                    </div>
+                    <br/>
+                    <p>Heure Prévu : 9h34</p>
+                    <p>Status : En cours</p>
+                    <p>Plage Horaire
+                        <select class="form-control">
+                          <option value="">8h-10h</option>
+                          <option active value="">10h-12h</option>
+                          <option value="">12h-14h</option>
+                          <option value="">14h-16h</option>
+                          <option value="">16h-18h</option>
+                        </select>
+                    </p>
+                  </div>
+                </div>   
             </div>
         </div>
-            <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-            <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-    </body>
-</html>
+    </div>
+</div>
