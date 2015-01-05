@@ -3,12 +3,13 @@ function Edition (){
 
 	self.setUp = function (){
 		$('#navEdition').on('click',function(){
-			$('#content').load('../html/superviseur/editionLivraison.html');
-			$('#navBar').find('ul').find("[class*='active']").removeClass('active');
-			$(this).parent().addClass('active');
+			self.loadEdition();
 		});
 	};
-}
 
-var edition = new Edition();
-edition.setUp();
+	self.loadEdition= function(){
+		$('#content').load('../html/superviseur/editionLivraison.html');
+		$('#navBar').find('ul').find("[class*='active']").removeClass('active');
+		$('#navEdition').parent().addClass('active');
+	};
+}

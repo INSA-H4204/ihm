@@ -2,13 +2,15 @@ function Preparation (){
 	var self= this;
 
 	self.setUp = function (){
+
 		$('#navPreparation').on('click',function(){
-			$('#content').load('../html/superviseur/preparationLivraison.html');			
-			$('#navBar').find('ul').find("[class*='active']").removeClass('active');
-			$(this).parent().addClass('active');
+			self.loadPreparation();
 		});
 	};
-}
 
-var preparation = new Preparation();
-preparation.setUp();
+	self.loadPreparation= function(){
+		$('#content').load('../html/superviseur/preparationLivraison.html');
+		$('#navBar').find('ul').find("[class*='active']").removeClass('active');
+		$('#navPreparation').parent().addClass('active');
+	};
+}
