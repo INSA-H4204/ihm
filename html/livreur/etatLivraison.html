@@ -4,49 +4,114 @@
         <meta charset="UTF-8" />
         <title>Optimod'Lyon</title>
 
-            <!-- Personal CSS stylesheets-->
+        <!-- Personal CSS stylesheets-->
         <!--<a href="../../bootstrap.php.cache"></a>-->
 
-        
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css">
-
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css" type="text/css">
-        <link href="maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awsome -->
+        <link href="../../assets/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Mon CSS -->
+        <link rel="stylesheet" href="../../css/livreur.css" type="text/css">
     </head>
-    <body>
-    <nav class="navbar navbar-inverse navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">H4204 - Optimod</a>
-    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Préparation <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Edition</a></li>
-        <li><a href="#">Suivi</a></li>
-      </ul>
-    </div>
-  </div></nav>
-        <div class="container">
+    <body>
+        <div class="content">
             <div class="row">
-            	<div  class="site-wrapper">
-                
+
+                <div id="carte" class="col-md-8">
+                    <div id="carteHeader">
+                        <ul class="nav nav-tabs nav-justified">
+                            <li id="navGPS" class="active"><a href="#"><h4><strong>GPS</strong></h4>    </a></li>
+                            <li id="navCarte"><a href="#"><h4><strong>Carte</strong></h4></a></li>
+                        </ul>                    
+                    </div>
+                    <div id="carteContent">
+                        <div class="tab-content">
+                            <div id="tabGPS" class="tab-pane active">
+                                GPS
+                            </div>
+                            <div id="tabCarte" class="tab-pane">
+                                CARTE
+                            </div>                        
+                        </div>
+                    </div>
                 </div>
-                <div class="mastfoot">
-                     <p>©2014 H4204 - IF INSA de Lyon</p>
+
+                <div id="infoLivraison" class="col-md-4">
+                    <div id="infoPanel" class="panel panel-default">
+                        <div id="infoHeader" class="panel-heading">
+                            <h2 class="panel-title"><strong>PROCHAINE LIVRAISON</strong></h2>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div id="detailLivaison" >   
+                                    <h4 id="infoAdresse"><strong>Adresse: </strong>41, Rue Alexandre Boutin</h4>
+                                    <br>
+                                    <h4 id="infoHArrivee"><strong>Heure d'arrivée prévu: </strong>9:52</h4>
+                                    <!-- <br> -->
+                                    <h4 id="infoHDepart"><strong>Heure de depart prévu: </strong>10:02</h4>
+                                    <br>
+                                    <div id="contactPanel" class="panel panel-default">
+                                        <div class="panel-body">                                    
+                                            <h3 id="contactTitle"><strong>Contact</strong></h3>
+                                            <div class="col-md-10">
+                                                <h4 id="contactNom"><strong>Nom: </strong> BOUNOUS, Gabriel Caê</h4>
+                                                <h4 id="contactTel"><strong>Téléphone: </strong> 06 76 06 05 45</h4>
+                                            </div>
+                                            <div class="col-md-2 pull-right">
+                                                <div id="boutonTel" class="fa-stack fa-2x">
+                                                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                                    <i class="fa fa-phone fa-flip-horizontal fa-stack-1x"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row>">
+                                <div id="listeProbleme" style="display:none;">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item active">Roue crevré</a>
+                                        <a href="#" class="list-group-item">Accident</a>
+                                        <a href="#" class="list-group-item">Problème mécanique</a>
+                                        <a href="#" class="list-group-item">Route bloquée</a>
+                                        <a href="#" class="list-group-item">
+                                            <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search for...">
+                                            <span class="input-group-btn">
+                                                <button id="validerProbleme" class="btn btn-default" type="button"><i class="fa fa-check"></i></button>
+                                            </span>
+                                        </div>
+                                        </a>
+                                    </div>                
+                                </div>
+                            </div>
+                            <div id="boutonsLivraison" class="row">
+                                <div class="col-md-4 text-center">
+                                    <i id="boutonValider" class="fa fa-check fa-3x"></i>
+                                </div>
+                                <div class="col-md-4 text-center">                                    
+                                    <i id="boutonBouchon" class="fa fa-exclamation-triangle fa-3x" data-toggle="tooltip" data-placement="bottom" title="Bouchon"></i>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <i id="boutonProbleme" class="fa fa-ellipsis-h fa-border fa-2x"></i>
+                                </div>                            
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </div>
-            <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-            <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+
+        <div class="footer">
+            <div class="mastfoot text-center">
+               <p>©2014 H4204 - IF INSA de Lyon</p>
+           </div>
+        </div>
+
+        <script src="../../assets/jquery-1.11.2.min.js"></script>
+        <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../js/livreur.js"></script>
     </body>
 </html>

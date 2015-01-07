@@ -6,6 +6,10 @@ function Suivi (){
 		$('#navSuivi').on('click',function(){
 			self.loadSuivi(); 	
 		});
+
+		$('#signOut').on('click',function(){
+			window.location.assign('../html/login.html');
+		});
 	};
 
 	self.loadSuivi = function(){

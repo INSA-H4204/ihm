@@ -5,7 +5,7 @@ function Login(){
 	var edition = new Edition();
 	var livreur = new Livreur();
 
-	self.setUp = function(){	
+	self.setUp = function(){
 		suivi.loadSuivi();
 		self.setUpPages();
 
@@ -29,8 +29,7 @@ function Login(){
 
 	self.login = function (){
 		var password = $("#inputPassword").val();
-		if (password === 'superviseur'){
-			$("#userMail").text($("#inputEmail").val());
+		if (password === 'superviseur'){			
 			window.location.assign('../html/index.html');
 		} else if( password === 'livreur'){
 			window.location.assign('../html/livreur/etatLivraison.html');

@@ -1,0 +1,39 @@
+.content{
+	margin:2%;
+}
+
+#contactTitle{
+	margin:-2%;
+}
+
+#boutonTel{
+	margin: 50% 0 0 -60%;
+}
+
+#detailLivaison{
+	margin: 2%;
+}
+
+i{
+	cursor: pointer;
+}
+
+#boutonsLivraison .fa-check:hover,
+#boutonsLivraison .fa-check.active
+{
+	color: #46AF49;
+}
+
+#boutonsLivraison .fa-exclamation-triangle:hover,
+#boutonsLivraison .fa-exclamation-triangle.active{
+	color: #BB2213;
+}
+
+#boutonTel:hover,
+#boutonTel.active{
+	color: #0E74AF;
+}
+
+#validerProbleme:hover{
+	color: #46AF49;
+}
