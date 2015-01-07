@@ -42,15 +42,20 @@ function Livreur(){
 		});
 
 		$("#boutonRetour").on("click",function(){
-			self.retourModal($(this).closest('.modal'));
+			self.retourModal();
 		});
 
 		$("#boutonEchec").on("click",function(){
-			self.retourModal($(this).closest('.modal'));
+			$('#modalEchec').modal('show');
+			$('#validerRaison').on('click',function(){
+				$('#raisonEchec').val('');
+				$(this).closest('.modal').modal('hide');
+				self.returnModal();
+			});
 		});
 
 		$("#boutonReussi").on("click",function(){
-			self.retourModal($(this).closest('.modal'));
+			self.retourModal();
 		});
 
 	};
@@ -114,8 +119,10 @@ function Livreur(){
 		$("#heureDepart").find('h4').html(heureDArrive);
 	};
 
-	self.retourModal = function(modal){
-		modal.modal('hide');
+	self.retourModal = function(){
+		$("#btnHeureDepart").show();
+		$("#heureDepart").find('h4').html("");
+		$("#heureDepart").closest('.modal').modal('hide');
 	};
 }
 

@@ -50,16 +50,29 @@
             </div>
         </div>
 
-<!-- Small modal -->
+        <div id="modalEchec" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3 class="modal-title">Raison de l'échec</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="form-group col-md-offset-1 col-md-10">
+                              <textarea class="form-control" id="raisonEchec" rows="3"></textarea>
+                          </div>
+                      </div>
+                      <div class="row">
+                            <div class="col-md-offset-2 col-md-6" >
+                                <button id="validerRaison" class="btn btn-success boutonModal" style="width:100%;"><i class="fa fa-check fa-2x"></i></button>
+                            </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 
-
-<div id="modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
         <div class="content">
             <div class="row">
                 <div id="carte" class="col-md-8">
@@ -158,7 +171,7 @@
         </div>
 
         <div class="footer">
-            <div class="mastfoot text-center">
+            <div class="text-center">
                <p>©2014 H4204 - IF INSA de Lyon</p>
            </div>
         </div>
