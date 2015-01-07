@@ -16,24 +16,77 @@
     </head>
 
     <body>
+
+        <div id="modalValidation" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog m">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h3 class="modal-title">Livraison - n°452964</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div id="heureArrive" class="col-md-offset-2 col-md-2">
+                            </div>
+                            <div id="heureDepart" class="col-md-offset-4 col-md-3">
+                                <button id="btnHeureDepart" class="btn btn-primary"><i class="fa fa-clock-o  fa-2x"></i></button> 
+                                <h4></h4>                             
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="signature" class="form-group col-md-offset-2 col-md-8"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-offset-1 col-md-2">
+                                <button id="boutonRetour" class="btn btn-primary" type="submit"><i class="fa fa-arrow-left  fa-3x"></i></button>
+                            </div>
+                            <div class="col-md-offset-4 col-md-4">
+                                <button id="boutonEchec" class="btn btn-danger boutonModal" type="submit"><i class="fa fa-times  fa-3x"></i></button>
+                                <button id="boutonReussi" class="btn btn-success boutonModal" type="submit"><i class="fa fa-check fa-3x"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Small modal -->
+
+
+<div id="modal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
         <div class="content">
             <div class="row">
-
                 <div id="carte" class="col-md-8">
-                    <div id="carteHeader">
-                        <ul class="nav nav-tabs nav-justified">
-                            <li id="navGPS" class="active"><a href="#"><h4><strong>GPS</strong></h4>    </a></li>
-                            <li id="navCarte"><a href="#"><h4><strong>Carte</strong></h4></a></li>
-                        </ul>                    
-                    </div>
-                    <div id="carteContent">
-                        <div class="tab-content">
-                            <div id="tabGPS" class="tab-pane active">
-                                GPS
+                    <div class="panel panel-default">                    
+                        <div id="carteHeader">
+                            <ul class="nav nav-tabs nav-justified">
+                                <li id="navGPS"><a href="#"><h4><strong>GPS</strong></h4>    </a></li>
+                                <li id="navCarte" class="active"><a href="#"><h4><strong>Carte</strong></h4></a></li>
+                            </ul>                    
+                        </div>
+                        <div id="carteContent">
+                            <div class="tab-content">
+                                <div id="tabGPS" class="tab-pane ">
+                                    GPS
+                                </div>
+                                <div id="tabCarte" class="tab-pane active">
+                                    <div role="tabpanel" class="tab-pane active" id="croix-luizet">
+                                        <br/>
+                                         <iframe
+                                            width="100%"
+                                            height="450"
+                                            frameborder="0" style="border:0;"
+                                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDRyM_qbfGhiViMn9aazDxSAfhzrdzADdA&q=Villeurbanne+Croix+Luizet">
+                                        </iframe>
+                                    </div>
+                                </div>                        
                             </div>
-                            <div id="tabCarte" class="tab-pane">
-                                CARTE
-                            </div>                        
                         </div>
                     </div>
                 </div>
@@ -46,7 +99,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div id="detailLivaison" >   
-                                    <h4 id="infoAdresse"><strong>Adresse: </strong>41, Rue Alexandre Boutin</h4>
+                                    <h4 id="infoAdresse"><strong>Adresse: </strong>52, Rue Alexandre Boutin</h4>
                                     <br>
                                     <h4 id="infoHArrivee"><strong>Heure d'arrivée prévu: </strong>9:52</h4>
                                     <!-- <br> -->
@@ -78,7 +131,7 @@
                                         <a href="#" class="list-group-item">Route bloquée</a>
                                         <a href="#" class="list-group-item">
                                             <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Search for...">
+                                            <input type="text" class="form-control" placeholder="Autre...">
                                             <span class="input-group-btn">
                                                 <button id="validerProbleme" class="btn btn-default" type="button"><i class="fa fa-check"></i></button>
                                             </span>
@@ -89,13 +142,13 @@
                             </div>
                             <div id="boutonsLivraison" class="row">
                                 <div class="col-md-4 text-center">
-                                    <i id="boutonValider" class="fa fa-check fa-3x"></i>
+                                    <i id="boutonValider" class="fa fa-check fa-5x" data-target=".bs-example-modal-lg"></i>
                                 </div>
                                 <div class="col-md-4 text-center">                                    
-                                    <i id="boutonBouchon" class="fa fa-exclamation-triangle fa-3x" data-toggle="tooltip" data-placement="bottom" title="Bouchon"></i>
+                                    <i id="boutonBouchon" class="fa fa-exclamation-triangle fa-4x" data-toggle="tooltip" data-placement="bottom" title="Bouchon"></i>
                                 </div>
                                 <div class="col-md-4 text-center">
-                                    <i id="boutonProbleme" class="fa fa-ellipsis-h fa-border fa-2x"></i>
+                                    <i id="boutonProbleme" class="fa fa-ellipsis-h fa-border fa-3x"></i>
                                 </div>                            
                             </div>
                         </div>

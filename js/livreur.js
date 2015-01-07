@@ -14,7 +14,7 @@ function Livreur(){
 		});
 
 		$("#boutonValider").on("click",function(){
-			self.activerBouton($(this));
+			self.validerLivraison();
 		});
 
 		$("#boutonBouchon").on("click",function(){
@@ -33,6 +33,25 @@ function Livreur(){
 			self.toggleProbleme();
 		});
 
+	};
+
+	self.modalSetUp = function(){
+
+		$("#heureDepart").on("click",function(){
+			self.afficherHeureDepart();
+		});
+
+		$("#boutonRetour").on("click",function(){
+			self.retourModal($(this).closest('.modal'));
+		});
+
+		$("#boutonEchec").on("click",function(){
+			self.retourModal($(this).closest('.modal'));
+		});
+
+		$("#boutonReussi").on("click",function(){
+			self.retourModal($(this).closest('.modal'));
+		});
 
 	};
 
@@ -49,7 +68,7 @@ function Livreur(){
 		} else{
 			bouton.addClass("active");
 		}
-	}
+	};
 
 	self.activerListeProbleme = function(div){
 		if(div.hasClass('active')){
@@ -57,13 +76,50 @@ function Livreur(){
 		} else{
 			div.addClass("active");
 		}
-	}
+	};
 
 	self.toggleProbleme = function(){
 		$("#listeProbleme").toggle();
 		$("#detailLivaison").toggle();
-	}
+	};
+
+	self.validerLivraison = function(){		
+		self.activerBouton($(this));
+		
+
+		var heureDArrive = '<h4><i class="fa fa-flag-checkered"></i> '+self.calculerHeure()+'</h4>'; 
+		$("#heureArrive").html(heureDArrive);
+
+
+		$("#modalValidation").modal('show');
+		self.modalSetUp();
+	};
+
+	self.calculerHeure = function(){
+		var currentdate = new Date(); 
+		var heure = currentdate.getHours();
+		var minutes = currentdate.getMinutes();
+		if(minutes<10){
+			minutes='0'+minutes;
+		}
+
+		var heureDArrive =heure+':'+minutes;
+		return heureDArrive;
+	};
+
+	self.afficherHeureDepart = function(){
+		$("#btnHeureDepart").hide();
+
+		var heureDArrive = '<i class="fa fa-car"></i> '+self.calculerHeure();
+		$("#heureDepart").find('h4').html(heureDArrive);
+	};
+
+	self.retourModal = function(modal){
+		modal.modal('hide');
+	};
 }
 
 var livreur = new Livreur();
 livreur.setUp();
+
+		//$("#modalValidation").modal('show');

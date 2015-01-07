@@ -14,8 +14,13 @@
 	margin: 2%;
 }
 
-i{
-	cursor: pointer;
+#boutonsLivraison{
+	position:absolute;
+	bottom: 5%;
+}
+
+#boutonsLivraison i{
+	margin-left: 40%;
 }
 
 #boutonsLivraison .fa-check:hover,
@@ -36,4 +41,31 @@ i{
 
 #validerProbleme:hover{
 	color: #46AF49;
+}
+
+#infoPanel{
+	height: 540px;
+}
+
+#signature{
+	background-color: white;
+	height: 200px;
+	border: solid;
+	margin-top: 20px;
+}
+
+.boutonModal{
+	margin-left: 15px;
+}
+
+.fa-active.active{
+	border: #707070 !important;
+}
+
+#boutonsLivraison i{
+	cursor: pointer;
+}
+
+a:focus{
+	outline:none;
 }
