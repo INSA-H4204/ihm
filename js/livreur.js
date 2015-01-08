@@ -1,7 +1,8 @@
 function Livreur(){
 	var self = this;
 
-	self.setUp = function(){
+	self.setUp = function(livreur){
+
 
 		$('#boutonBouchon').tooltip("show");
 
@@ -31,6 +32,12 @@ function Livreur(){
 
 		$("#validerProbleme").on("click",function(){
 			self.toggleProbleme();
+		});
+
+		$("#autreProbleme").on("keypress",function(e){
+			if(e.keyCode == 13){
+				self.toggleProbleme();
+			}
 		});
 
 	};
@@ -88,7 +95,7 @@ function Livreur(){
 		$("#detailLivaison").toggle();
 	};
 
-	self.validerLivraison = function(){		
+	self.validerLivraison = function(){	
 		self.activerBouton($(this));
 		
 
@@ -124,9 +131,11 @@ function Livreur(){
 		$("#heureDepart").find('h4').html("");
 		$("#heureDepart").closest('.modal').modal('hide');
 	};
+
+	self.setLivreur = function(livreur){
+		$('#livreur').html(livreur);
+	}
 }
 
 var livreur = new Livreur();
 livreur.setUp();
-
-		//$("#modalValidation").modal('show');

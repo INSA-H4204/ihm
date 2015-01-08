@@ -29,12 +29,14 @@ function Login(){
 
 	self.login = function (){
 		var password = $("#inputPassword").val();
+		// var email = $("#inputEmail").val();
+
 		if (password === 'superviseur'){			
 			window.location.assign('../html/index.html');
 		} else if( password === 'livreur'){
 			window.location.assign('../html/livreur/etatLivraison.html');
 		} else {
-			alert('SVP remplir le email avec "superviseur" ou "livreur"');
+			alert('SVP remplir le mot de passe avec "superviseur" ou "livreur"');
 		}
 	};
 	

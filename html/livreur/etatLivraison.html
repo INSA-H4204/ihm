@@ -18,9 +18,34 @@
 
     <body>
 
+        <!-- Modal pour la validation de la livraison -->
         <div id="modalValidation" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog m">
                 <div class="modal-content">
+                    <!-- Modal pour l'ecriture de la raison d'echec -->
+                    <div id="modalEchec" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h3 class="modal-title">Raison de l'échec</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="form-group col-md-offset-1 col-md-10">
+                                            <textarea class="form-control" id="raisonEchec" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-offset-2 col-md-6" >
+                                            <button id="validerRaison" class="btn btn-success boutonModal" style="width:100%;"><i class="fa fa-check fa-2x"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Fin de modalEchec -->
+
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h3 class="modal-title">Livraison - n°452964</h3>
@@ -49,44 +74,22 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> <!-- Fin de modalValidation -->
 
-        <div id="modalEchec" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h3 class="modal-title">Raison de l'échec</h3>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="form-group col-md-offset-1 col-md-10">
-                              <textarea class="form-control" id="raisonEchec" rows="3"></textarea>
-                          </div>
-                      </div>
-                      <div class="row">
-                            <div class="col-md-offset-2 col-md-6" >
-                                <button id="validerRaison" class="btn btn-success boutonModal" style="width:100%;"><i class="fa fa-check fa-2x"></i></button>
-                            </div>
-                        </div>
-                  </div>
-              </div>
-          </div>
-      </div>
         <div class="content">
             <div class="row">
                 <div id="carte" class="col-md-8">
                     <div class="panel panel-default">                    
                         <div id="carteHeader">
                             <ul class="nav nav-tabs nav-justified">
-                                <li id="navGPS"><a href="#"><h4><strong>GPS</strong></h4>    </a></li>
+                                <li id="navGPS"><a href="#"><h4><strong>GPS</strong></h4></a></li>
                                 <li id="navCarte" class="active"><a href="#"><h4><strong>Carte</strong></h4></a></li>
                             </ul>                    
                         </div>
                         <div id="carteContent">
                             <div class="tab-content">
                                 <div id="tabGPS" class="tab-pane ">
-                                    GPS
+                                <img id="gps" src="../../assets/gps.png">
                                 </div>
                                 <div id="tabCarte" class="tab-pane active">
                                     <div role="tabpanel" class="tab-pane active" id="croix-luizet">
@@ -115,7 +118,6 @@
                                     <h4 id="infoAdresse"><strong>Adresse: </strong>52, Rue Alexandre Boutin</h4>
                                     <br>
                                     <h4 id="infoHArrivee"><strong>Heure d'arrivée prévu: </strong>9:52</h4>
-                                    <!-- <br> -->
                                     <h4 id="infoHDepart"><strong>Heure de depart prévu: </strong>10:02</h4>
                                     <br>
                                     <div id="contactPanel" class="panel panel-default">
@@ -144,7 +146,7 @@
                                         <a href="#" class="list-group-item">Route bloquée</a>
                                         <a href="#" class="list-group-item">
                                             <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Autre...">
+                                            <input id="autreProbleme" type="text" class="form-control" placeholder="Autre...">
                                             <span class="input-group-btn">
                                                 <button id="validerProbleme" class="btn btn-default" type="button"><i class="fa fa-check"></i></button>
                                             </span>
@@ -152,6 +154,9 @@
                                         </a>
                                     </div>                
                                 </div>
+                            </div>
+                            <div class="row" style="margin:2%;">
+                                <h4 id="livreur"><strong>Livreur: </strong>Gonzalez</h4>
                             </div>
                             <div id="boutonsLivraison" class="row">
                                 <div class="col-md-4 text-center">

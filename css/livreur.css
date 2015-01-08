@@ -15,10 +15,6 @@
 	bottom: 5%;
 }
 
-#boutonsLivraison i{
-	margin-left: 40%;
-}
-
 #boutonsLivraison .fa-check:hover,
 #boutonsLivraison .fa-check.active
 {
@@ -70,8 +66,19 @@
 
 #boutonsLivraison i{
 	cursor: pointer;
+	margin-left: 40%
+}
+
+#boutonTel i{
+	cursor: pointer;
+}
+
+#gps{
+	width:100%;
+	max-height:450px;
 }
 
 a:focus{
 	outline:none;
 }
+
